@@ -2,7 +2,8 @@
 var add = require('./calculator/add')
 var subtract = require('./calculator/subtract')
 var multiply = require('./calculator/multiply')
-var divide = require('./calculator/divide')
+var divide = require('./calculator/divide');
+const mod = require('./calculator/mod');
 
 
 // Test Case 1 (Addition)
@@ -23,3 +24,7 @@ test("Should multiply two numbers", () => {
 test("Should divide two numbers", () => {
   expect(divide(25, 10)).toBe(2.5);
 });
+
+test("Should perform mod of 2 numbers", ()=>{
+  expect(mod(25,10)).toBe(5)
+})

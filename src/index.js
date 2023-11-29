@@ -3,6 +3,7 @@ var add = require("./calculator/add");
 var subtract = require("./calculator/subtract");
 var multiply = require("./calculator/multiply");
 var divide = require("./calculator/divide");
+var mod = require("./calculator/mod")
 
 window.onload = function () {
   document.getElementById("calculateBtn").addEventListener("click", calculate);
@@ -29,6 +30,8 @@ function calculate() {
       case "divide":
         result = divide(firstNum, secondNum);
         break;
+      case "mod":
+        result = mod(firstNum,secondNum)
       default:
         alert("Error!");
         break;
